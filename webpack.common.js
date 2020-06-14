@@ -17,6 +17,14 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ["url-loader"],
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          // eslint options (if necessary)
+        },
+      },
     ],
   },
   plugins: [
