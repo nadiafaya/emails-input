@@ -1,0 +1,9 @@
+{
+  "name": "emails-input",
+  "version": "1.0.0",
+  "description": "Emails input library - Generates a form control to add multiple emails",
+  "main": "index.js",
+  "author": "<nadiafaya@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
