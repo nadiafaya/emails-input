@@ -3,6 +3,107 @@
   src: url('./OpenSans-Regular.ttf') format('truetype');
 }
 
-.email-input {
+.emails-input {
   font-family: 'Open Sans', sans-serif;
+  color: #050038;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background: #f8f8f7;
+}
+
+.emails-input__container {
+  padding: 32px 50px 24px 50px;
+}
+
+.emails-input__title {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.emails-input__input {
+  background: #ffffff;
+  border: 1px solid #c3c2cf;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emails-input__email {
+  background: rgba(102, 153, 255, 0.2);
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0 8px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.emails-input__email.emails-input__email--invalid {
+  border-bottom: 1px dashed #d92929;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.emails-input__email-close {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.emails-input__email-close:before,
+.emails-input__email-close:after {
+  position: absolute;
+  right: 5px;
+  top: calc(50% - 5px);
+  content: ' ';
+  height: 10px;
+  width: 1px;
+  background-color: #333;
+}
+.emails-input__email-close:before {
+  transform: rotate(45deg);
+}
+
+.emails-input__email-close:after {
+  transform: rotate(-45deg);
+}
+
+.emails-input__text-input {
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  flex-grow: 1;
+  height: 25px;
+  vertical-align: middle;
+  padding-top: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.emails-input__text-input::placeholder {
+  color: #c3c2cf;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.emails-input__text-input:focus {
+  outline: none;
+}
+
+.emails-input__action-container {
+  background: #ffffff;
+  padding: 24px 50px 32px 50px;
+}
+
+.emails-input__button {
+  background: #4262ff;
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  padding: 8px 16px;
+  margin-right: 8px;
 }
