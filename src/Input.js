@@ -15,12 +15,23 @@ class Input {
 
   initializeHandlers() {
     this.element.addEventListener('keydown', this.onKeyDown.bind(this));
+    this.element.addEventListener('focusout', this.createEmail.bind(this));
   }
 
   onKeyDown(event) {
-    this.changed = true;
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' || event.key === ',') {
       event.preventDefault();
+      this.createEmail();
+    }
+  }
+
+  onFocusOut() {
+    this.parent.addEmail(this.element.value);
+    this.element.value = '';
+  }
+
+  createEmail() {
+    if (this.element.value) {
       this.parent.addEmail(this.element.value);
       this.element.value = '';
     }
