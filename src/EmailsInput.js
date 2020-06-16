@@ -43,6 +43,14 @@ class EmailsInput {
     const email = new Email(emailText, this);
     this.emailList.push(email);
   }
+
+  deleteEmail(email) {
+    this.emailList.splice(this.emailList.indexOf(email), 1);
+  }
+
+  deleteLastEmail() {
+    this.emailList.slice(-1)[0].delete();
+  }
 }
 
 export default EmailsInput;

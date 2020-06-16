@@ -23,6 +23,9 @@ class Input {
       event.preventDefault();
       this.createEmail();
     }
+    if (event.key === 'Backspace' && !this.element.value) {
+      this.parent.deleteLastEmail();
+    }
   }
 
   onFocusOut() {

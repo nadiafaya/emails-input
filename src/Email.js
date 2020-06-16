@@ -3,6 +3,7 @@ class Email {
     this.parent = parent;
     this.text = text;
     this.createElement();
+    this.initializeHandlers();
   }
 
   createElement() {
@@ -12,6 +13,16 @@ class Email {
     const containerElement = this.parent.element.querySelector('.emails-input__input');
     const inputElement = this.parent.element.querySelector('.emails-input__text-input');
     containerElement.insertBefore(this.element, inputElement);
+  }
+
+  initializeHandlers() {
+    const closeButton = this.element.querySelector('.emails-input__email-close');
+    closeButton.addEventListener('click', this.delete.bind(this));
+  }
+
+  delete() {
+    this.parent.deleteEmail(this);
+    this.element.remove();
   }
 }
 
