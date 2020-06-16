@@ -16,6 +16,7 @@ class Input {
     this.element.addEventListener('keydown', this.onKeyDown.bind(this));
     this.element.addEventListener('focusout', this.createEmail.bind(this));
     this.element.addEventListener('paste', this.onPaste.bind(this));
+    this.parent.element.addEventListener('click', this.onParentClick.bind(this));
   }
 
   onKeyDown(event) {
@@ -38,6 +39,12 @@ class Input {
     const pastedText = event.clipboardData.getData('text');
     const emails = pastedText.split(',');
     emails.forEach((email) => email && this.parent.addEmail(email));
+  }
+
+  onParentClick(event) {
+    if (event.target === this.parent.element) {
+      this.element.focus();
+    }
   }
 
   createEmail() {
