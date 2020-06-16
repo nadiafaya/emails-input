@@ -6,27 +6,14 @@
 .emails-input {
   font-family: 'Open Sans', sans-serif;
   color: #050038;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  background: #f8f8f7;
-}
-
-.emails-input__container {
-  padding: 32px 50px 24px 50px;
-}
-
-.emails-input__title {
-  font-size: 20px;
-  font-weight: normal;
-}
-
-.emails-input__input {
   background: #ffffff;
   border: 1px solid #c3c2cf;
   border-radius: 4px;
   padding: 4px;
   display: flex;
   flex-wrap: wrap;
+  overflow-y: scroll;
+  flex: 1;
 }
 
 .emails-input__email {
@@ -89,21 +76,4 @@
 
 .emails-input__text-input:focus {
   outline: none;
-}
-
-.emails-input__action-container {
-  background: #ffffff;
-  padding: 24px 50px 32px 50px;
-}
-
-.emails-input__button {
-  background: #4262ff;
-  border-radius: 6px;
-  color: #fff;
-  border: none;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: normal;
-  padding: 8px 16px;
-  margin-right: 8px;
 }

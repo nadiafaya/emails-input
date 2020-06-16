@@ -2,9 +2,69 @@
 <html>
   <head>
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <style type="text/css">
+      /* this is just for the form's text, the email input has it's own source for the font */
+      @font-face {
+        font-family: 'Open Sans';
+        src: url('https://fonts.googleapis.com/css2?family=Open+Sans') format('truetype');
+      }
+
+      .demo-form {
+        font-family: 'Open Sans', sans-serif;
+        color: #050038;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        background: #f8f8f7;
+        max-height: 500px;
+        max-width: 500px;
+      }
+
+      .demo-form__control {
+        padding: 32px 50px 24px 50px;
+      }
+
+      .demo-form__control #emails-input {
+        display: flex;
+        max-height: 50px;
+      }
+
+      .demo-form__title {
+        font-size: 20px;
+        font-weight: normal;
+      }
+
+      .demo-form__action_container {
+        background: #ffffff;
+        padding: 24px 50px 32px 50px;
+      }
+
+      .demo-form_button {
+        background: #4262ff;
+        border-radius: 6px;
+        color: #fff;
+        border: none;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: normal;
+        padding: 8px 16px;
+        margin-right: 8px;
+      }
+    </style>
   </head>
   <body>
-    <div id="emails-input"></div>
+    <div class="demo-form">
+      <div class="demo-form__control">
+        <h1 class="demo-form__title">Share <strong>Board name</strong> with others</h1>
+        <div id="emails-input"></div>
+      </div>
+      <div class="demo-form__action_container">
+        <button type="button" class="demo-form_button">Add email</button>
+        <button type="button" class="demo-form_button">
+          Get emails count
+        </button>
+      </div>
+    </div>
+
     <%= htmlWebpackPlugin.tags.bodyTags %>
     <script>
       var inputContainerNode = document.querySelector('#emails-input');

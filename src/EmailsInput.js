@@ -23,18 +23,6 @@ class EmailsInput {
     this.element = document.createElement('div');
     this.element.id = this.id;
     this.element.classList.add('emails-input');
-    this.element.innerHTML = `
-      <div class="emails-input__container">
-        <h1 class="emails-input__title">Share <strong>Board name</strong> with others</h1>
-        <div class="emails-input__input"></div>
-      </div>
-      <div class="emails-input__action-container">
-          <button type="button" class="emails-input__button">Add email</button>
-          <button type="button" class="emails-input__button">
-            Get emails count
-          </button>
-        </div>
-    `;
     this.containerNode.appendChild(this.element);
     this.input = new Input(this);
   }

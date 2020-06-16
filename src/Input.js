@@ -9,8 +9,7 @@ class Input {
     this.element = document.createElement('textarea');
     this.element.classList.add('emails-input__text-input');
     this.element.placeholder = 'add more people...';
-    const containerElement = this.parent.element.querySelector('.emails-input__input');
-    containerElement.appendChild(this.element);
+    this.parent.element.appendChild(this.element);
   }
 
   initializeHandlers() {
