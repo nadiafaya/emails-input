@@ -26,20 +26,7 @@ class EmailsInput {
     this.element.innerHTML = `
       <div class="emails-input__container">
         <h1 class="emails-input__title">Share <strong>Board name</strong> with others</h1>
-        <div class="emails-input__input">
-          <div class="emails-input__email">
-            john@miro.com <span class="emails-input__email-close"></span>
-          </div>
-          <div class="emails-input__email emails-input__email--invalid">
-            invalid.email <span class="emails-input__email-close"></span>
-          </div>
-          <div class="emails-input__email">
-            mike@miro.com <span class="emails-input__email-close"></span>
-          </div>
-          <div class="emails-input__email">
-            alexander@miro.com <span class="emails-input__email-close"></span>
-          </div>
-        </div>
+        <div class="emails-input__input"></div>
       </div>
       <div class="emails-input__action-container">
           <button type="button" class="emails-input__button">Add email</button>
