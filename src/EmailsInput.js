@@ -49,7 +49,10 @@ class EmailsInput {
   }
 
   deleteLastEmail() {
-    this.emailList.slice(-1)[0].delete();
+    const lastEmail = this.emailList.slice(-1)[0];
+    if (lastEmail) {
+      lastEmail.delete();
+    }
   }
 }
 
