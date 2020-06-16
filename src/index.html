@@ -58,8 +58,8 @@
         <div id="emails-input"></div>
       </div>
       <div class="demo-form__action_container">
-        <button type="button" class="demo-form_button">Add email</button>
-        <button type="button" class="demo-form_button">
+        <button type="button" class="demo-form_button" onclick="addRandomEmail()">Add email</button>
+        <button type="button" class="demo-form_button" onclick="getEmailsCount()">
           Get emails count
         </button>
       </div>
@@ -69,6 +69,15 @@
     <script>
       var inputContainerNode = document.querySelector('#emails-input');
       var emailsInput = EmailsInput(inputContainerNode);
+
+      function addRandomEmail() {
+        const randomEmail = `example-${Math.round(Math.random() * 1000)}@mail.com`;
+        emailsInput.addEmail(randomEmail);
+      }
+
+      function getEmailsCount() {
+        alert(`Valid email count: ${emailsInput.getValidEmails().length}`);
+      }
     </script>
   </body>
 </html>

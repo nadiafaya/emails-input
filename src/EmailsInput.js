@@ -42,6 +42,10 @@ class EmailsInput {
       lastEmail.delete();
     }
   }
+
+  getValidEmails() {
+    return this.emailList.filter((email) => email.isValidEmail());
+  }
 }
 
 export default EmailsInput;
