@@ -30,6 +30,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Demo page',
+      filename: '../index.html',
       inject: false,
       template: 'src/index.html',
     }),
