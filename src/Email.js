@@ -8,11 +8,16 @@ class Email {
 
   createElement() {
     this.element = document.createElement('div');
-    this.element.classList.add('emails-input__email');
+    this.element.classList.add(...['emails-input__email', !this.isValidEmail() && 'emails-input__email--invalid']);
+
     this.element.innerHTML = `<span>${this.text}</span> <span class="emails-input__email-close"></span>`;
     const containerElement = this.parent.element.querySelector('.emails-input__input');
     const inputElement = this.parent.element.querySelector('.emails-input__text-input');
     containerElement.insertBefore(this.element, inputElement);
+  }
+
+  isValidEmail() {
+    return /^.+@.+\..+$/.test(this.text);
   }
 
   initializeHandlers() {
