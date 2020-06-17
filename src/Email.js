@@ -8,7 +8,10 @@ class Email {
 
   createElement() {
     this.element = document.createElement('div');
-    this.element.classList.add(...['emails-input__email', !this.isValidEmail() && 'emails-input__email--invalid']);
+    this.element.classList.add('emails-input__email');
+    if (!this.isValidEmail()) {
+      this.element.classList.add('emails-input__email--invalid');
+    }
 
     this.element.innerHTML = `<span>${this.text}</span> <span class="emails-input__email-close"></span>`;
     const inputElement = this.parent.element.querySelector('.emails-input__text-input');
@@ -26,7 +29,7 @@ class Email {
 
   delete() {
     this.parent.deleteEmail(this);
-    this.element.remove();
+    this.element.parentNode.removeChild(this.element);
   }
 }
 

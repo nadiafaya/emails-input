@@ -11,6 +11,11 @@
     "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
+    "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
@@ -23,6 +28,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.10.1",
     "html-webpack-plugin": "^4.3.0",
     "webpack-merge": "^4.2.2"
   }

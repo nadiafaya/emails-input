@@ -20,7 +20,7 @@
 
       .demo-form__control #emails-input {
         display: flex;
-        max-height: 50px;
+        height: 50px;
       }
 
       .demo-form__title {
@@ -47,10 +47,10 @@
       var emailsInput = EmailsInput(inputContainerNode);
 
       function addRandomEmail() {
-        const randomEmail = `example-${Math.round(Math.random() * 1000)}@mail.com`;
+        const randomEmail = 'example-' + Math.round(Math.random() * 1000) + '@mail.com';
         emailsInput.addEmail(randomEmail);
       }
 
       function getEmailsCount() {
-        alert(`Valid email count: ${emailsInput.getValidEmails().length}`);
+        alert('Valid email count: ' + emailsInput.getValidEmails().length);
       }</script></body></html>

@@ -18,12 +18,15 @@ module.exports = {
         use: ['url-loader'],
       },
       {
+        enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
-        options: {
-          // eslint options (if necessary)
-        },
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
       },
     ],
   },
